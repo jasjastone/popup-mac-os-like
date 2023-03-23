@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>IOS Like Popup Minimizer</title>
+  </head>
+  <body>
+    <button onclick="openMacPopup()">Open</button>
+    <div id="parentpopup">
+      <div id="popupactionbuttons" onfocus="console.log('eh')">
+        <p>
+          <button class="buttonaction" onclick="closeMacPopup()">
+            <img src="./assets/close.png" alt="X" />
+          </button>
+          <button class="buttonaction">
+            <img src="./assets/minimize.png" alt="-" />
+          </button>
+          <button class="buttonaction" onclick="toogleFullScreen()">
+            <img src="./assets/full.png" alt="[]" />
+          </button>
+        </p>
+        <div id="titlepopup"><h1>Tittle</h1></div>
+      </div>
+      <div id="contentpopup">
+        Main content
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+          exercitationem veniam earum corporis quia recusandae cum iusto placeat
+          inventore culpa obcaecati, porro quas minus deleniti dignissimos velit
+          nihil nulla quaerat. Iste vel ipsa odit laudantium animi, nesciunt
+          quam sint, eum beatae explicabo saepe aliquam amet vero adipisci
+          aperiam a cupiditate quas iure laboriosam veniam, mollitia magni.
+          Maiores placeat culpa dolorum! Animi consequatur veritatis eaque
+          facere voluptatibus debitis distinctio veniam odit doloremque nam quod
+          quia similique, aspernatur aut saepe accusamus natus. Ex ullam debitis
+          modi optio. Excepturi eligendi minus accusamus vero.
+        </p>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", function (e) {
+        var parentpopup = document.getElementById("popupactionbuttons");
+        var properties = getPopupProperties();
+        if(properties.currentStatte == "inactive"){
+            closeMacPopup();
+        }
+        else{
+            openMacPopup();
+        }
+      });
+      // var isDown = false;
+      // var parentpopup = document.querySelector("#popupactionbuttons");
+
+      //     parentpopup.addEventListener("mouseover",function(e){
+      //         parentpopup.addEventListener("mousemove",function(e2){
+      //             if(isDown===true){
+      //                 dragPopupPosition(e2)
+      //             }
+      //             console.log(isDown);
+      //         });
+      //         parentpopup.addEventListener("mousedown",function(e3){
+      //         console.log("here whaaat");
+      //         isDown=true;
+      //     });
+      // });
+      // parentpopup.addEventListener("focusout",function(e4){
+      //     console.log("here");
+      //     isDown=false;
+      // });
+    </script>
+  </body>
+</html>
