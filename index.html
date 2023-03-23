@@ -45,32 +45,37 @@
       document.addEventListener("DOMContentLoaded", function (e) {
         var parentpopup = document.getElementById("popupactionbuttons");
         var properties = getPopupProperties();
+        if(properties == null){
+            savePopupCurrentState();
+            properties = getPopupProperties();
+        }
         if(properties.currentStatte == "inactive"){
             closeMacPopup();
         }
         else{
             openMacPopup();
         }
-      });
-      // var isDown = false;
-      // var parentpopup = document.querySelector("#popupactionbuttons");
+    //   var isDown = false;
+    //   var parentpopup = document.querySelector("#popupactionbuttons");
 
-      //     parentpopup.addEventListener("mouseover",function(e){
-      //         parentpopup.addEventListener("mousemove",function(e2){
-      //             if(isDown===true){
-      //                 dragPopupPosition(e2)
-      //             }
-      //             console.log(isDown);
-      //         });
-      //         parentpopup.addEventListener("mousedown",function(e3){
-      //         console.log("here whaaat");
-      //         isDown=true;
-      //     });
-      // });
-      // parentpopup.addEventListener("focusout",function(e4){
-      //     console.log("here");
-      //     isDown=false;
-      // });
+    //       parentpopup.addEventListener("mouseover",function(e){
+    //           parentpopup.addEventListener("mousemove",function(e2){
+    //               if(isDown===true){
+    //                   dragPopupPosition(e2)
+    //               }
+    //               console.log(isDown);
+    //           });
+    //           parentpopup.addEventListener("mousedown",function(e3){
+    //           console.log("here whaaat");
+    //           isDown=true;
+    //       });
+    //   });
+    //   parentpopup.addEventListener("focusout",function(e4){
+    //       console.log("here");
+    //       isDown=false;
+    //   });
+    });
+
     </script>
   </body>
 </html>
