@@ -10,7 +10,7 @@
   <body>
     <button onclick="openMacPopup()">Open</button>
     <div id="parentpopup">
-      <div id="popupactionbuttons" onfocus="console.log('eh')">
+      <div id="popupactionbuttons">
         <p>
           <button class="buttonaction" onclick="closeMacPopup()">
             <img src="./assets/close.png" alt="X" />
@@ -43,7 +43,8 @@
     <script src="./js/index.js"></script>
     <script defer>
       document.addEventListener("DOMContentLoaded", function (e) {
-        var parentpopup = document.getElementById("popupactionbuttons");
+        var parentpopup = document.getElementById("parentpopup");
+        var popupactionbuttons = document.getElementById("popupactionbuttons");
         var properties = getPopupProperties();
         if(properties == null){
             savePopupCurrentState();
@@ -55,6 +56,7 @@
         else{
             openMacPopup();
         }
+        startDragPopup();
     //   var isDown = false;
     //   var parentpopup = document.querySelector("#popupactionbuttons");
 

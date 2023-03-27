@@ -10,12 +10,11 @@
     width: 50vw;
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 10px;
-    margin: 10px;
     position: absolute;
     left: 20vw;
     top: 3vh;
     overflow: hidden;
-    z-index: 100000 !important;
+    z-index: 100 !important;
 }
 
 #popupactionbuttons button {
@@ -25,6 +24,7 @@
     background-color: transparent   ;
     margin: 2px 5px;
     color: white;
+    cursor: pointer;
 }
 #popupactionbuttons button:hover {
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
@@ -44,6 +44,7 @@
     margin-left: -10px;
     margin-top: -10px;
     margin-bottom: 10px;
+    cursor: unset;
     border-bottom: 2px solid grey;
 }
 #popupactionbuttons:focus,#popupactionbuttons:active{
@@ -57,11 +58,12 @@
     display: inline-block;
     text-align: center;
     color: grey;
+    cursor: initial;
 }
 #contentpopup{
     box-shadow: 0px 0px 3px rgba(128, 128, 128, 0.5) inset;
-    height: 100%;
-    min-height: max-content;
+    height: 88%;
+    /* min-height: max-content; */
     overflow: scroll;
     padding: 5px;
     border-radius: 10px;
